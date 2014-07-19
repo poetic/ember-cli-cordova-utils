@@ -1,0 +1,26 @@
+{
+  "name": "ember-cli-cordova-utils",
+  "version": "0.0.0",
+  "description": "Utilities for cordova apps made with ember-cli-corodva",
+  "main": "index.js",
+  "scripts": { },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/poetic/ember-cli-cordova-utils"
+  },
+  "keywords": [
+    "ember-addon",
+    "emberjs",
+    "cordova",
+    "phonegap"
+  ],
+  "ember-addon": {
+    "main": "index.js"
+  },
+  "author": "Jake Craige <jake@poeticsystems.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/poetic/ember-cli-cordova-utils/issues"
+  },
+  "homepage": "https://github.com/poetic/ember-cli-cordova-utils"
+}
