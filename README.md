@@ -1,8 +1,10 @@
 # ember-cli-cordova-utils
 
 A utility library for wrapping various cordova plugins to provide a unified
-interface whether or not you are running in the browser or app. The general idea
-is to ease the development of these type of apps.
+interface whether or not you are running in the browser or app. This also
+includes removing the callbacks and returning promises instead.
+
+The general idea is to ease the development of these type of apps.
 
 ### Installation
 
@@ -16,3 +18,4 @@ npm install --save-dev poetic/ember-cli-cordova-utils
 ### supported plugins
 
 + [org.apache.cordova.dialogs](https://github.com/apache/cordova-plugin-dialogs/blob/master/doc/index.md)
++ [org.apache.cordova.contacts](https://github.com/apache/cordova-plugin-contacts/blob/master/doc/index.md)
