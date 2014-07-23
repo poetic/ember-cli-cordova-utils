@@ -3,7 +3,7 @@ import Ember from 'ember';
 var Promise = Ember.RSVP.Promise;
 
 var hasNotificationType = function(type){
-  return typeof navigator.notification !== 'undefined' && navigator[type];
+  return typeof navigator.notification !== 'undefined' && navigator.notification[type];
 };
 
 export default Ember.Object.extend({
@@ -54,7 +54,7 @@ export default Ember.Object.extend({
           reject();
         }
       }
-    })
+    });
   },
 
   // Convenience destroy method to call destroyRecord on an ember-data model
@@ -66,7 +66,7 @@ export default Ember.Object.extend({
     }
 
     this.confirm(msg, title).then(function() {
-      return model.destroyRecord().then(resolve, function(err){
+      return model.destroyRecord().catch(function(){
         confirmObject.alert('We are unable to remove this right now. Please try again later.');
       });
     });

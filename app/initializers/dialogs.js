@@ -1,4 +1,4 @@
-import Dialogs from '../utils/alert';
+import Dialogs from '../utils/dialogs';
 
 export default {
   name: 'dialogs',
