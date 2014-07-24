@@ -1,7 +1,5 @@
 import Ember from 'ember';
 
-var Promise = Ember.RSVP.Promise;
-
 var hasNotificationType = function(type){
   return typeof navigator.notification !== 'undefined' && navigator.notification[type];
 };
@@ -15,7 +13,7 @@ export default Ember.Object.extend({
       title = 'Alert';
     }
 
-    return new Promise(function(resolve){
+    return new Ember.RSVP.Promise(function(resolve){
       if (hasNotificationType('alert')) {
         navigator.notification.alert(msg, resolve, title);
       } else {
@@ -36,7 +34,7 @@ export default Ember.Object.extend({
       buttonLabels = ['Yes', 'No'];
     }
 
-    return new Promise(function(resolve, reject){
+    return new Ember.RSVP.Promise(function(resolve, reject){
       if (hasNotificationType('confirm')) {
         navigator.notification.confirm(msg, function(index) {
           // We're going to assume it's a 2 button confirm. If not, then just
