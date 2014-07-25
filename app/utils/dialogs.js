@@ -63,7 +63,7 @@ export default Ember.Object.extend({
       title = 'Delete';
     }
 
-    this.confirm(msg, title).then(function() {
+    return this.confirm(msg, title).then(function() {
       return model.destroyRecord().catch(function(){
         confirmObject.alert('We are unable to remove this right now. Please try again later.');
       });
