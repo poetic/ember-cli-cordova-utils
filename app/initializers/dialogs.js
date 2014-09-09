@@ -1,7 +1,8 @@
-import Dialogs from '../utils/dialogs';
+import Dialogs from '../services/dialogs';
 
 export default {
   name: 'dialogs',
+  after: 'cordova',
 
   initialize: function(container, application) {
     container.register('cordova:dialogs', Dialogs);

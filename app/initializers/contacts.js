@@ -1,7 +1,8 @@
-import Contacts from '../utils/contacts';
+import Contacts from '../services/contacts';
 
 export default {
   name: 'contacts',
+  after: 'cordova',
 
   initialize: function(container, application) {
     container.register('cordova:contacts', Contacts);
