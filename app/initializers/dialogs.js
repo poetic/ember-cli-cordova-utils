@@ -10,5 +10,6 @@ export default {
     application.inject('route',      'dialogs', 'cordova:dialogs');
     application.inject('controller', 'dialogs', 'cordova:dialogs');
     application.inject('view',       'dialogs', 'cordova:dialogs');
+    application.inject('component',  'dialogs', 'cordova:dialogs');
   }
 };
